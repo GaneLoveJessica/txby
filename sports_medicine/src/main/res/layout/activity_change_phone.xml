@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_change_phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical"
+    tools:context="com.tianxiabuyi.sports_medicine.personal.ModifyPhoneActivity">
+
+    <TextView
+        style="@style/BlankLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:text="手机号" />
+
+        <EditText
+            android:id="@+id/et_old_phone"
+            style="@style/Text_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <View style="@style/HorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tv_confirm_phone"
+            style="@style/BlackText_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:text="原手机号" />
+
+        <EditText
+            android:id="@+id/et_confirm_phone"
+            style="@style/Text_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <View style="@style/HorizontalLine" />
+
+    <LinearLayout
+        android:id="@+id/ll_new_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:text="新手机号" />
+
+        <EditText
+            android:id="@+id/et_new_phone"
+            style="@style/Text_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#f3f3f3"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/BlackText_16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="手机号码"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:padding="12dp" />
+
+                <TextView
+                    android:id="@+id/btn_getVerification"
+                    style="@style/WhiteText_14sp"
+                    android:background="@drawable/get_verification_shape"
+                    android:gravity="center"
+                    android:onClick="getVerification"
+                    android:text="@string/get_verification_code" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_verification"
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3f3f3"
+                android:hint="验证码"
+                android:padding="12dp" />
+        </LinearLayout>
+    -->
+    <Button
+        android:id="@+id/btn_change"
+        style="@style/WhiteText_16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/change_phone_shape"
+        android:gravity="center"
+        android:onClick="changePhone"
+        android:text="绑定新手机" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/avatar" />
+
+        <ImageView
+            android:id="@+id/iv_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/hat1" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/WhiteText_16sp"
+        android:layout_marginTop="12dp"
+        android:text="妲己" />
+
+    <TextView
+        android:id="@+id/tv_ask_count"
+        style="@style/WhiteText_16sp"
+        android:text="630" />
+</LinearLayout>

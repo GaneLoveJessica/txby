@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_modify_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="用户名" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                style="@style/GrayText_16sp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:background="@null"
+                android:maxLines="1"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="姓名" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/GrayText_16sp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:background="@null"
+                android:enabled="false"
+                android:maxLines="1"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="性别" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:background="@null"
+                android:drawableRight="@mipmap/detail"
+                android:enabled="false"
+                android:maxLines="1"
+                android:onClick="chooseGender"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="职称" />
+
+            <EditText
+                android:id="@+id/et_positional_title"
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:background="@null"
+                android:enabled="false"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="专业" />
+
+            <EditText
+                android:id="@+id/et_major"
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:background="@null"
+                android:enabled="false"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="简介" />
+
+            <EditText
+                android:id="@+id/et_introduce"
+                style="@style/BlackText_16sp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:background="@null"
+                android:enabled="false"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <TextView style="@style/BlankLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_width="match_parent"
+                android:layout_margin="16dp"
+                android:gravity="center_vertical"
+                android:text="职业资格证书" />
+
+            <TextView style="@style/HorizontalLine" />
+
+            <GridView
+                android:id="@+id/gv_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:horizontalSpacing="12dp"
+                android:numColumns="4"
+                android:verticalSpacing="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

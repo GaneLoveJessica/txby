@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.eeesys.frame.view.CleanableEditText
+        android:id="@+id/old_pwd"
+        style="@style/Text_16sp"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_point_red"
+        android:drawablePadding="16dp"
+        android:drawableRight="@mipmap/clear_gray"
+        android:hint="@string/hint_old_pwd"
+        android:inputType="textPassword"
+        android:padding="16dp" />
+
+    <TextView style="@style/HorizontalLine" />
+
+    <com.eeesys.frame.view.CleanableEditText
+        android:id="@+id/new_pwd"
+        style="@style/Text_16sp"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_point_red"
+        android:drawablePadding="16dp"
+        android:drawableRight="@mipmap/clear_gray"
+        android:hint="@string/hint_new_pwd"
+        android:inputType="textPassword"
+        android:padding="16dp" />
+
+    <TextView style="@style/HorizontalLine"
+
+        />
+
+    <com.eeesys.frame.view.CleanableEditText
+        android:id="@+id/confirm_new_pwd"
+        style="@style/Text_16sp"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_point_red"
+        android:drawablePadding="16dp"
+        android:drawableRight="@mipmap/clear_gray"
+        android:hint="@string/hint_confirm_password"
+        android:inputType="textPassword"
+        android:padding="16dp" />
+
+    <TextView style="@style/HorizontalLine" />
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/WhiteText_16sp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/common_btn_shape"
+        android:gravity="center"
+        android:onClick="modifyPwd"
+        android:text="@string/save" />
+</LinearLayout>

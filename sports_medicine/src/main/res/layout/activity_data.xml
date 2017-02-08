@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/BlankLine"
+            android:layout_height="8dp" />
+        <!--头像-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_weight="1"
+                android:text="头像" />
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:onClick="modifyAvatar"
+                android:src="@mipmap/avatar" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="16dp"
+                android:src="@mipmap/detail" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <!--用户名-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:layout_weight="1"
+                android:text="用户名" />
+
+            <TextView
+                style="@style/Text_16sp"
+                android:id="@+id/tv_username" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <!--个人资料-->
+        <TextView
+            style="@style/BlackText_16sp"
+            android:drawableRight="@mipmap/detail"
+            android:layout_width="match_parent"
+            android:onClick="modifyData"
+            android:padding="12dp"
+            android:text="个人资料" />
+
+        <TextView style="@style/HorizontalLine" />
+
+        <!--积分详情-->
+        <TextView
+            style="@style/BlackText_16sp"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/detail"
+            android:id="@+id/tv_share_app"
+            android:layout_width="match_parent"
+            android:onClick="myPointDetail"
+            android:padding="12dp"
+            android:text="分享APP" />
+
+        <TextView style="@style/HorizontalLine" />
+
+        <!--积分详情-->
+        <TextView
+            style="@style/BlackText_16sp"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/detail"
+            android:id="@+id/tv_point_detail"
+            android:layout_width="match_parent"
+            android:onClick="myPointDetail"
+            android:padding="12dp"
+            android:text="积分详情"
+            android:visibility="gone" />
+
+        <!--<TextView style="@style/HorizontalLine" />
+
+        &lt;!&ndash;设置&ndash;&gt;
+        <TextView
+            android:id="@+id/tv_setting"
+            style="@style/BlackText_16sp"
+            android:layout_width="match_parent"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/detail"
+            android:padding="12dp"
+            android:text="@string/settings" />-->
+
+        <TextView
+            style="@style/BlankLine"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:text="账号绑定"
+            android:textSize="14sp" />
+
+        <!--手机-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:onClick="modifyPhone"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:drawableLeft="@mipmap/icon_data_phone"
+                android:drawablePadding="8dp"
+                android:layout_weight="1"
+                android:text="手机" />
+
+            <TextView
+                style="@style/Text_16sp"
+                android:drawablePadding="16dp"
+                android:drawableRight="@mipmap/detail"
+                android:id="@+id/tv_phone" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <!--QQ-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/ll_qq"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:onClick="onClick"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:drawableLeft="@mipmap/icon_data_qq"
+                android:drawablePadding="8dp"
+                android:layout_weight="1"
+                android:text="QQ" />
+
+            <TextView
+                style="@style/Text_16sp"
+                android:drawablePadding="16dp"
+                android:drawableRight="@mipmap/detail"
+                android:id="@+id/tv_qq"
+                android:text="未绑定" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <!--微信-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/ll_wechat"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:onClick="onClick"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:drawableLeft="@mipmap/icon_data_wechat"
+                android:drawablePadding="8dp"
+                android:layout_weight="1"
+                android:text="微信" />
+
+            <TextView
+                style="@style/Text_16sp"
+                android:drawablePadding="16dp"
+                android:drawableRight="@mipmap/detail"
+                android:id="@+id/tv_wechat"
+                android:text="未绑定" />
+        </LinearLayout>
+
+        <TextView style="@style/HorizontalLine" />
+
+        <!--微博-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/ll_weibo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:onClick="onClick"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/BlackText_16sp"
+                android:drawableLeft="@mipmap/icon_data_sinaweibo"
+                android:drawablePadding="8dp"
+                android:layout_weight="1"
+                android:text="微博" />
+
+            <TextView
+                style="@style/Text_16sp"
+                android:drawablePadding="16dp"
+                android:drawableRight="@mipmap/detail"
+                android:id="@+id/tv_weibo"
+                android:text="未绑定" />
+        </LinearLayout>
+
+        <TextView style="@style/BlankLine" />
+
+        <!--    <TextView
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:onClick="logout"
+                android:padding="16dp"
+                android:text="@string/logout"
+                android:textColor="#ff7c7c" />-->
+        <TextView
+            style="@style/BlackText_16sp"
+            android:background="@android:color/white"
+            android:drawableLeft="@mipmap/icon_setting"
+            android:drawablePadding="6dp"
+            android:drawableRight="@mipmap/detail"
+            android:id="@+id/tv_setting"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:text="@string/settings" />
+        <TextView style="@style/BlankLine" />
+    </LinearLayout>
+</ScrollView>

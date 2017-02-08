@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="12dp">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:src="@mipmap/avatar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/BlackText_18sp"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/tv_profession"
+            style="@style/GrayText_16sp"
+            android:layout_alignBaseline="@+id/tv_name"
+            android:layout_toLeftOf="@+id/tv_ask_number"
+            android:layout_toRightOf="@+id/tv_name"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tv_ask_number"
+            style="@style/Text_16sp"
+            android:layout_alignBaseline="@+id/tv_name"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/icon_ask_count"
+            android:drawablePadding="4dp" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/Text_16sp"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="6dp" />
+    </RelativeLayout>
+
+</LinearLayout>

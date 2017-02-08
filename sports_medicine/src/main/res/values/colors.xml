@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1eb6e7</color>
+    <color name="colorPrimaryDark">#1eb6e7</color>
+    <color name="colorAccent">#1eb6e7</color>
+    <color name="divider">#dcdcdc</color>
+    <color name="gray">#999999</color>
+    <color name="blank">#f1f0ee</color>
+    <color name="lighter_gray">#ddd</color>
+    <color name="chart_fill_color">#cfeef0</color>
+</resources>

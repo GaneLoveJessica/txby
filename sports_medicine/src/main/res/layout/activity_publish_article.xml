@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_publish_article"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tianxiabuyi.sports_medicine.personal.personal_e.activity.PublishArticleActivity">
+    <!-- 输入框 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--标题输入框-->
+            <EditText
+                android:id="@+id/et_title"
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="输入标题"
+                android:inputType="textMultiLine"
+                android:padding="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_choose_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3f5f5"
+                android:onClick="chooseCategory"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/Text_16sp"
+                    android:layout_weight="1"
+                    android:text="标签" />
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    style="@style/Text_16sp"
+                    android:drawablePadding="12dp"
+                    android:drawableRight="@mipmap/detail"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+
+            <TextView style="@style/HorizontalLine" />
+
+            <!--内容输入框-->
+            <jp.wasabeef.richeditor.RichEditor
+                android:id="@+id/re_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

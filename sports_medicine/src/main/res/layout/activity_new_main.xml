@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_new_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tianxiabuyi.sports_medicine.common.view.UnScrollViewPager
+            android:id="@+id/fl_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView style="@style/HorizontalLine" />
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/ctl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="4dp"
+            tl:tl_iconGravity="TOP"
+            tl:tl_iconHeight="20dp"
+            tl:tl_iconMargin="3dp"
+            tl:tl_iconWidth="20dp"
+            tl:tl_textSelectColor="@color/colorPrimary"
+            tl:tl_textUnselectColor="@color/gray"
+            tl:tl_textsize="14sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#202020"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:paddingBottom="56dp"
+        android:paddingTop="56dp" />
+
+</android.support.v4.widget.DrawerLayout>

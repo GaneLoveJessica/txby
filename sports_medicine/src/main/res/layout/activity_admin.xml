@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_month"
+        style="@style/BlackText_18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_last_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_month"
+        android:layout_alignTop="@id/tv_month"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:src="@mipmap/last_month" />
+
+    <ImageView
+        android:id="@+id/iv_next_month"
+        style="@style/WhiteText_16sp"
+        android:layout_alignBottom="@id/tv_month"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_month"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:src="@mipmap/next_month_disable" />
+
+    <TextView
+        style="@style/HorizontalLine"
+        android:layout_below="@+id/tv_month" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_month">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

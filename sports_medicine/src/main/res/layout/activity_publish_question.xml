@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 输入框 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--标题输入框-->
+         <!--   <EditText
+                android:id="@+id/et_title"
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/hint_title"
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColorHint="@color/gray" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_choose_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3f5f5"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/Text_16sp"
+                    android:layout_weight="1"
+                    android:text="选择标签" />
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    style="@style/Text_16sp"
+                    android:drawablePadding="12dp"
+                    android:drawableRight="@mipmap/detail"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+
+            <TextView style="@style/HorizontalLine" />
+
+            <!--内容输入框-->
+            <EditText
+                android:id="@+id/et_content"
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/publish_question_hint"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:padding="15dp"
+                android:textColorHint="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.tianxiabuyi.sports_medicine.common.view.MyGridView
+                    android:id="@+id/gv_picture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="4dp" />
+
+                <ImageView
+                    android:id="@+id/iv_add_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:padding="12dp"
+                    android:src="@mipmap/toolbar_icon_album" />
+            </LinearLayout>
+
+
+            <TextView style="@style/HorizontalLine" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                style="@style/BlackText_16sp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="24dp"
+                android:drawablePadding="16dp" />
+
+            <com.tianxiabuyi.sports_medicine.common.view.MyGridView
+                android:id="@+id/gv_expert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

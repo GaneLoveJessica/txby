@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blank"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/personal_e_bg_shape"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/WhiteText_18sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="16dp"
+            android:text="@string/personal_center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_total_points"
+                style="@style/WhiteText_14sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32dp"
+                android:drawablePadding="12dp"
+                android:drawableTop="@mipmap/icon_value"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text="积分数" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_avatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/avatar"
+                app:civ_border_color="#79d1ea"
+                app:civ_border_width="3.5dp" />
+
+            <TextView
+                android:id="@+id/tv_total_answer"
+                style="@style/WhiteText_14sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="32dp"
+                android:drawablePadding="12dp"
+                android:drawableTop="@mipmap/icon_answer"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text="答题数" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/WhiteText_18sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_e_personl_wave" />
+
+    <GridView
+        android:id="@+id/gv_e_personal_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="16dp"
+        android:numColumns="3"
+        android:padding="16dp"
+        android:verticalSpacing="16dp" />
+</LinearLayout>

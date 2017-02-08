@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lzy.widget.HeaderViewPager
+        android:id="@+id/scrollableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/foot"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        app:hvp_topOffset="76dp">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/expert_top"
+                android:paddingTop="60dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:src="@mipmap/avatar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/WhiteText_16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_profession"
+                        style="@style/WhiteText_14sp"
+                        android:layout_marginTop="4dp"
+                        android:ellipsize="marquee"
+                        android:maxLines="2" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="4dp"
+                        android:isIndicator="true"
+                        android:numStars="1"
+                        android:rating="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_praise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--点赞数-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <TextView
+                        style="@style/Text_16sp"
+                        android:text="点赞数 " />
+
+                    <TextView
+                        android:id="@+id/tv_love_number"
+                        style="@style/BlackText_16sp" />
+                </LinearLayout>
+
+                <TextView style="@style/VerticalLine" />
+
+                <!--答题数-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <TextView
+                        style="@style/Text_16sp"
+                        android:text="答题数 " />
+
+                    <TextView
+                        android:id="@+id/tv_answer_number"
+                        style="@style/BlackText_16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView style="@style/HorizontalLine" />
+        </LinearLayout>
+
+        <com.lzy.widget.tab.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            app:pstsDividerColor="#00000000"
+            app:pstsIndicatorColor="#2DA4F0"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsShouldExpand="false"
+            app:pstsTextAllCaps="false"
+            app:pstsUnderlineHeight="2dp" />
+
+        <com.tianxiabuyi.sports_medicine.common.view.UnScrollViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.lzy.widget.HeaderViewPager>
+
+
+    <FrameLayout
+        android:id="@+id/fl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/status_bar_height">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:onClick="back"
+            android:padding="16dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            style="@style/WhiteText_18sp"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:layout_height="?actionBarSize"
+            android:text="@string/expert_detail" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/foot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blank"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Text_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="24dp"
+            android:text="提问：5健康云/次" />
+
+        <TextView
+            style="@style/WhiteText_16sp"
+            android:background="@color/colorPrimary"
+            android:onClick="toAskQuestion"
+            android:padding="16dp"
+            android:text="开始提问" />
+    </LinearLayout>
+</RelativeLayout>

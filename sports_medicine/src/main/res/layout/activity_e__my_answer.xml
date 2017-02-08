@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:onClick="back"
+            android:padding="16dp"
+            android:src="@mipmap/back" />
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/stl_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            tl:tl_bar_color="@color/colorPrimary"
+            tl:tl_indicator_color="#ffffff"
+            tl:tl_textSelectColor="@color/colorPrimary"
+            tl:tl_indicator_corner_radius="16dp"
+            tl:tl_textsize="16sp"
+            tl:tl_tab_padding="16dp"/>
+
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_modify_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianxiabuyi.sports_medicine.personal.personal_c.activity.C_ModifyDataActivity">
+
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_width="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="真实姓名" />
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/GrayText_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="@null"
+            android:enabled="false"
+            android:drawableRight="@mipmap/detail"
+            android:maxLines="1"
+            android:padding="16dp" />
+    </LinearLayout>
+
+    <TextView style="@style/HorizontalLine" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_width="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="性别" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            style="@style/GrayText_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:onClick="modifyGender"
+            android:background="@null"
+            android:text="未设置"
+            android:drawableRight="@mipmap/detail"
+            android:maxLines="1"
+            android:enabled="false"
+            android:padding="16dp" />
+    </LinearLayout>
+
+    <TextView style="@style/HorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_width="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="年龄" />
+
+        <EditText
+            android:id="@+id/et_age"
+            style="@style/GrayText_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="@null"
+            android:drawableRight="@mipmap/detail"
+            android:inputType="number"
+            android:hint="未设置"
+            android:maxLines="1"
+            android:enabled="false"
+            android:padding="16dp" />
+    </LinearLayout>
+
+    <TextView style="@style/HorizontalLine" />
+
+ <!--   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_width="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="身份证号" />
+
+        <EditText
+            android:id="@+id/et_card_number"
+            style="@style/GrayText_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="@null"
+            android:maxLines="1"
+            android:drawableRight="@mipmap/detail"
+            android:enabled="false"
+            android:padding="16dp" />
+    </LinearLayout>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blank"/>
+</LinearLayout>

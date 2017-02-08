@@ -1,0 +1,122 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    <!--水平线-->
+    <style name="HorizontalLine">
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+    <!--垂直线-->
+    <style name="VerticalLine">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+    <!--空白行-->
+    <style name="BlankLine">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/blank</item>
+    </style>
+
+    <style name="TextParent">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--12sp的字-->
+    <style name="Text_12sp" parent="TextParent">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--12sp的白色字-->
+    <style name="WhiteText_12sp" parent="Text_12sp">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <!--12sp的灰色字-->
+    <style name="GrayText_12sp" parent="Text_12sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <!--14sp的字-->
+    <style name="Text_14sp" parent="TextParent">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!--14sp的白色字-->
+    <style name="WhiteText_14sp" parent="Text_14sp">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <!--14sp的灰色字-->
+    <style name="GrayText_14sp" parent="Text_14sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <!--14sp的黑色字-->
+    <style name="BlackText_14sp" parent="Text_14sp">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!--16sp的字-->
+    <style name="Text_16sp" parent="TextParent">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--16sp的灰色字-->
+    <style name="GrayText_16sp" parent="Text_16sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <!--16sp的灰色字-->
+    <style name="GrayText_18sp" parent="Text_18sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <!--16sp的白色字-->
+    <style name="WhiteText_16sp" parent="Text_16sp">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <!--16sp的黑色字-->
+    <style name="BlackText_16sp" parent="Text_16sp">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!--18sp的字-->
+    <style name="Text_18sp" parent="TextParent">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!--18sp的白色字-->
+    <style name="WhiteText_18sp" parent="Text_18sp">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <!--18sp的黑色字-->
+    <style name="BlackText_18sp" parent="Text_18sp">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="CommonBtn" parent="WhiteText_16sp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--RatingBar样式-->
+    <style name="RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+    </style>
+
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+</resources>

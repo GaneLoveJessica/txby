@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CloudPlayerDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="playersdk_ad_descrip_youku">了解详情</string>
+    <string name="player_tip_loading">即将为您播放</string>
+
+
+    <string name="replay">重播</string>
+    <string name="play_next">下集</string>
+</resources>

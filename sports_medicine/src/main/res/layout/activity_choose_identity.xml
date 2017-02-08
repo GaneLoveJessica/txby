@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_choose_identify"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".login.activity.ChooseIdentityActivity">
+
+    <TextView
+        android:id="@+id/iv_back"
+        style="@style/WhiteText_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="back"
+        android:padding="24dp"
+        android:drawableLeft="@mipmap/back"
+        android:drawablePadding="8dp"
+        android:text="@string/back" />
+
+    <TextView
+        style="@style/WhiteText_18sp"
+        android:text="@string/register"
+        android:layout_marginTop="16dp"
+        android:padding="24dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btn_common"
+        style="@style/WhiteText_16sp"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="166dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
+        android:background="@drawable/login_btn_shape"
+        android:gravity="center"
+        android:onClick="registerPatient"
+        android:text="@string/common_user" />
+
+    <Button
+        android:id="@+id/btn_expert"
+        style="@style/WhiteText_16sp"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="86dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
+        android:background="@drawable/login_btn_shape"
+        android:gravity="center"
+        android:onClick="registerExpert"
+        android:text="@string/person_expert" />
+</FrameLayout>

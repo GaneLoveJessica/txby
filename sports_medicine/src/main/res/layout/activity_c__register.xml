@@ -1,0 +1,179 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blank"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:id="@+id/account"
+                style="@style/BlackText_16sp"
+                android:layout_alignBaseline="@+id/et_account"
+                android:drawableLeft="@mipmap/user"
+                android:drawablePadding="16dp"
+                android:text="账号" />
+
+            <com.eeesys.frame.view.CleanableEditText
+                android:id="@+id/et_account"
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/account"
+                android:background="@null"
+                android:drawableEnd="@mipmap/clear_text"
+                android:drawableRight="@mipmap/clear_text"
+                android:hint="@string/hint_username"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:textColorHint="#bfbfbf" />
+
+            <TextView
+                style="@style/HorizontalLine"
+                android:layout_below="@+id/et_account"
+                android:layout_marginLeft="32dp" />
+
+            <TextView
+                android:id="@+id/pwd"
+                style="@style/BlackText_16sp"
+                android:layout_alignBaseline="@+id/cet_pwd"
+                android:drawableLeft="@mipmap/pass"
+                android:drawablePadding="16dp"
+                android:text="@string/password" />
+
+            <com.eeesys.frame.view.CleanableEditText
+                android:id="@+id/cet_pwd"
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/et_account"
+                android:layout_toRightOf="@+id/account"
+                android:background="@null"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:textColorHint="#bfbfbf" />
+
+            <TextView
+                style="@style/HorizontalLine"
+                android:layout_below="@+id/cet_pwd"
+                android:layout_marginLeft="32dp" />
+
+            <com.eeesys.frame.view.CleanableEditText
+                android:id="@+id/cet_repwd"
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/cet_pwd"
+                android:layout_toRightOf="@+id/account"
+                android:background="@null"
+                android:hint="@string/hint_repassword"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:textColorHint="#bfbfbf" />
+
+            <TextView
+                style="@style/HorizontalLine"
+                android:layout_below="@+id/cet_repwd"
+                android:layout_marginLeft="32dp" />
+
+            <TextView
+                android:id="@+id/phone"
+                style="@style/BlackText_16sp"
+                android:layout_alignBaseline="@+id/et_phone"
+                android:drawableLeft="@mipmap/phone"
+                android:drawablePadding="16dp"
+                android:text="@string/phone" />
+
+            <com.eeesys.frame.view.CleanableEditText
+                android:id="@+id/et_phone"
+                style="@style/Text_16sp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/cet_repwd"
+                android:layout_toRightOf="@+id/account"
+                android:background="@null"
+                android:drawableEnd="@mipmap/clear_text"
+                android:drawableRight="@mipmap/clear_text"
+                android:hint="@string/hint_phone"
+                android:inputType="phone"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:textColorHint="#bfbfbf" />
+
+            <TextView
+                style="@style/HorizontalLine"
+                android:layout_below="@+id/et_phone"
+                android:layout_marginLeft="32dp" />
+
+            <!-- <com.eeesys.frame.view.CleanableEditText
+                 android:id="@+id/et_verification"
+                 style="@style/Text_16sp"
+                 android:layout_width="match_parent"
+                 android:layout_below="@+id/et_phone"
+                 android:layout_toLeftOf="@+id/btn_getVerification"
+                 android:layout_toRightOf="@+id/account"
+                 android:background="@null"
+                 android:drawableEnd="@mipmap/clear_text"
+                 android:drawableRight="@mipmap/clear_text"
+                 android:hint="@string/hint_verification"
+                 android:inputType="number"
+                 android:padding="20dp"
+                 android:singleLine="true"
+                 android:textColorHint="#bfbfbf" />
+
+             <TextView
+                 android:id="@+id/btn_getVerification"
+                 style="@style/Text_14sp"
+                 android:layout_alignBaseline="@+id/et_verification"
+                 android:layout_alignParentRight="true"
+                 android:layout_below="@+id/et_phone"
+                 android:layout_marginRight="16dp"
+                 android:background="@drawable/get_code_shape"
+                 android:gravity="center"
+                 android:onClick="getVerification"
+                 android:text="@string/get_verification_code"
+                 android:textColor="@color/colorPrimary" />
+     -->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cb_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/rule_selector"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/tv_rule"
+                style="@style/Text_14sp"
+                android:text="已阅读并同意《使用条款》和《隐私条款》"
+                android:textColor="#989292" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/WhiteText_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/login_btn_shape"
+            android:gravity="center"
+            android:onClick="toRegister"
+            android:text="@string/submit" />
+    </LinearLayout>
+</ScrollView>

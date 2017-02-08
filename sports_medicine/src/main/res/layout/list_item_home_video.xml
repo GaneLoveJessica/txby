@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:src="@mipmap/icon_play" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/WhiteText_12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#72000000"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:text="运动前需做好什么准备" />
+</FrameLayout>

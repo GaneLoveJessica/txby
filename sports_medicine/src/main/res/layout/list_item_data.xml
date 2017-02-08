@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:descendantFocusability="beforeDescendants"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/BlackText_16sp"
+        android:layout_width="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1.5"
+        android:gravity="center_vertical"
+        android:text="标题" />
+
+    <EditText
+        android:id="@+id/tv_content"
+        style="@style/GrayText_16sp"
+        android:layout_width="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="2"
+        android:background="@null"
+        android:enabled="false"
+        android:text="内容" />
+</LinearLayout>

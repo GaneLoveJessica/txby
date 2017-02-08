@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WhiteText_16sp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawer_menu_item_bg"
+    android:paddingBottom="12dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="8dp"
+ />

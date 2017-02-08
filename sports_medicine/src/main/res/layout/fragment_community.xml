@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/BlankLine"
+        android:background="@color/colorPrimary" />
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:onClick="showDrawer"
+            android:padding="16dp"
+            android:src="@mipmap/icon_menu" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            style="@style/WhiteText_16sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_menu" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/WhiteText_18sp"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            android:text="@string/question" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_ask"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp"
+            android:src="@mipmap/search" />
+
+        <ImageView
+            android:id="@+id/iv_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp"
+            android:paddingLeft="8dp"
+            android:src="@mipmap/ask_question" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tianxiabuyi.sports_medicine.common.view.UnScrollViewPager
+            android:id="@+id/vp_communicate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/load_error"/>
+    </FrameLayout>
+</LinearLayout>

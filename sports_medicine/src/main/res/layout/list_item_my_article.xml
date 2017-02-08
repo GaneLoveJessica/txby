@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/point"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_circle_point" />
+
+    <TextView
+        style="@style/VerticalLine"
+        android:layout_alignBottom="@id/tv_title"
+        android:layout_below="@id/point"
+        android:layout_marginLeft="20dp"
+        android:background="#deded6"
+        android:paddingBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/GrayText_14sp"
+        android:layout_alignTop="@+id/point"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@id/point"
+        android:text="2016-08-26" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/BlackText_16sp"
+        android:layout_alignLeft="@id/tv_time"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginRight="12dp"
+        android:paddingBottom="28dp"
+        android:text="轻松扭一扭，练出迷人小蛮腰" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/detail"
+        android:layout_margin="16dp"/>
+</RelativeLayout>

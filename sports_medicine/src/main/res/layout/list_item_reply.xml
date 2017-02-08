@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/avatar" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_head"
+        android:layout_toRightOf="@+id/iv_head"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/BlackText_16sp"
+            android:text="用户名" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/GrayText_14sp"
+            android:text="16/8/6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ll_love"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/iv_tread"
+            android:layout_width="@dimen/love_size"
+            android:layout_height="@dimen/love_size"
+            android:layout_margin="6dp"
+            android:src="@mipmap/timeline_icon_untread" />
+
+        <TextView
+            android:id="@+id/tv_tread_number"
+            style="@style/Text_14sp"
+            android:text="0"
+            android:textColor="#999999" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_love"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/iv_love"
+            android:layout_width="@dimen/love_size"
+            android:layout_height="@dimen/love_size"
+            android:layout_margin="6dp"
+            android:src="@mipmap/timeline_icon_unlike" />
+
+        <TextView
+            android:id="@+id/tv_love_number"
+            style="@style/Text_14sp"
+            android:text="0"
+            android:textColor="#999999" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/Text_14sp"
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@+id/layout"
+        android:layout_below="@+id/layout"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="6dp"
+        android:lineSpacingExtra="6dp"
+        android:textSize="15sp" />
+
+    <com.tianxiabuyi.sports_medicine.common.view.MyGridView
+        android:id="@+id/gv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/iv_head"
+        android:horizontalSpacing="4dp"
+        android:numColumns="3"
+        android:verticalSpacing="4dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

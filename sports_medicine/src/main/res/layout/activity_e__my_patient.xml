@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianxiabuyi.sports_medicine.personal.personal_e.activity.E_MyPatientActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/toolbar_my_patient"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:onClick="back"
+            android:padding="16dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            style="@style/WhiteText_18sp"
+            android:layout_gravity="center"
+            android:text="@string/my_user" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.eeesys.frame.view.MySwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_my_patient"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:headerDividersEnabled="false"
+                android:divider="@color/divider"
+                android:dividerHeight="0.5dp" />
+        </com.eeesys.frame.view.MySwipeRefreshLayout>
+
+        <include layout="@layout/empty_view" />
+    </FrameLayout>
+
+
+</LinearLayout>

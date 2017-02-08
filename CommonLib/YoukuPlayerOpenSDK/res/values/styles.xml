@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme">
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="loadingStyle" parent="@android:style/Widget.DeviceDefault.ProgressBar">
+　　                <item name="android:indeterminateDrawable">@drawable/player_loading</item>
+        <item name="android:minWidth">30dip</item>
+　　       	<item name="android:maxWidth">30dip</item>
+　　       	<item name="android:minHeight">30dip</item>
+　　        	<item name="android:maxHeight">30dip</item>
+    </style>
+    <style name="FontD">
+        <item name="android:textSize">@dimen/text_size_d</item>
+    </style>
+    <style name="FontE">
+        <item name="android:textSize">@dimen/text_size_e</item>
+    </style>
+    <style name="FontF">
+    <item name="android:textSize">@dimen/text_size_f</item>
+</style>
+    <!-- detail page type -->
+    <style name="detail_play_load" parent="FontE">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="detail_play_load_name" parent="FontD">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="detail_replay" parent="FontF">
+    <item name="android:textColor">#ffffffff</item>
+</style>
+
+
+</resources>

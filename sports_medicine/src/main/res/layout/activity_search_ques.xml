@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".question.activity.SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <com.eeesys.frame.view.CleanableEditText
+            android:id="@+id/et_search"
+            style="@style/BlackText_16sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/et_search_bg"
+            android:drawableRight="@mipmap/clear_text"
+            android:hint="输入关键字"
+            android:imeOptions="actionSearch"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/BlackText_18sp"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
+
+    <TextView style="@style/HorizontalLine" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_communicate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextAppearance="@style/BlackText_14sp"
+            app:tabTextColor="#868686" />
+
+        <TextView
+            style="@style/BlankLine"
+            android:layout_height="10dp"
+            android:layout_below="@+id/tl_communicate" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tl_communicate"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+    </RelativeLayout>
+
+
+</LinearLayout>

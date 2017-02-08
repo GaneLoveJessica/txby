@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 清晰度按钮 -->
+    <dimen name="vq_width">42dp</dimen>
+    <dimen name="vq_height">24dp</dimen>
+    <dimen name="wm_width">70dp</dimen>
+    <dimen name="wm_height">70dp</dimen>
+</resources>

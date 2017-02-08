@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tianxiabuyi.sports_medicine">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 信鸽 -->
+
+
+    <!-- 【必须】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 分享 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 优酷 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <!--应用统计-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- ****************************信鸽start********************* -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v2">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理 -->
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action" -->
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushService"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v2" />
+
+        <!-- 【必须】 通知service，此选项有助于提高抵达率 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.tianxiabuyi.sports_medicine.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100231435" />
+        <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="A19H1PG54JEF" />
+
+        <receiver
+            android:name=".common.receiver.XgMsgReceiver"
+            android:exported="false">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+        <!-- ***********************信鸽end*************************** -->
+        <!-- ***********************分享 和 第三方登录 start************************** -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <intent-filter>
+                <data android:scheme="tencent1105771780" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 新浪微博客户端分享回调必须配置 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- ************************分享end************************** -->
+        <!-- ************************计步器start*********************** -->
+        <service
+            android:name=".pedometer.service.StepService"
+            android:priority="1000"
+            android:process="com.tianxiabuyi.sports_medicine">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".pedometer.service.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- *********************计步器end************************** -->
+        <activity
+            android:name=".login.activity.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".login.activity.ChooseIdentityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.E_RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.C_RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".question.activity.QuesDetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".question.activity.PublishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".question.activity.BrowseImgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.ninegrid.preview.ImagePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".question.activity.CommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".personal.personal_c.activity.MyQuesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.C_MyExpertActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_e.activity.E_MyAnswerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".question.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_e.activity.E_MyPatientActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".preach.activity.PreachDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.ModifyPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.ModifyPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.C_ModifyDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_e.activity.E_ModifyDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.MyPointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_e.activity.PublishArticleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.RuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.HealthFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.PersonalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.SportDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.BodyMeasureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_e.activity.ArticleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".preach.activity.YoukuPlayerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout|uiMode"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".preach.activity.PreachActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".expert.activity.ExpertDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".expert.activity.ExpertSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".preach.activity.CloudEssenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.DayRankingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.HistoryStepActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.personal_c.activity.AdminRankingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.DataActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.PointExplainActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

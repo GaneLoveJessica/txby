@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/avatar" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/Text_18sp"
+        android:layout_width="match_parent"
+        android:layout_alignTop="@+id/iv_image"
+        android:layout_toEndOf="@+id/iv_image"
+        android:layout_toRightOf="@+id/iv_image"
+        android:paddingLeft="8dp"
+        android:textColor="#0b0b0b" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/Text_14sp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tv_name"
+        android:layout_toEndOf="@+id/iv_image"
+        android:layout_toRightOf="@+id/iv_image"
+        android:paddingLeft="8dp"
+        android:textColor="#aaaaaa" />
+
+    <!--   <TextView
+           android:id="@+id/tv_title"
+           style="@style/Text_16sp"
+           android:layout_width="match_parent"
+           android:layout_below="@+id/iv_image"
+           android:background="@android:color/white"
+           android:paddingLeft="20dp"
+           android:paddingRight="20dp"
+           android:textColor="#333333" />-->
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/Text_16sp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/iv_image"
+        android:layout_marginTop="6dp"
+        android:background="@android:color/white"
+        android:lineSpacingExtra="6dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="#666666" />
+
+    <com.ninegrid.NineGridView
+        android:id="@+id/gv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"
+        app:ngv_mode="grid"
+        app:ngv_gridSpacing="3dp"
+        app:ngv_singleImageSize="200dp"
+        app:ngv_maxSize="3"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_tread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/iv_love"
+        android:src="@mipmap/timeline_icon_untread" />
+
+    <ImageView
+        android:id="@+id/iv_love"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/timeline_icon_unlike"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:padding="6dp"/>
+
+    <ImageView
+        android:id="@+id/iv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/gv_picture"
+        android:layout_marginRight="16dp"
+        android:padding="8dp"
+        android:src="@mipmap/timeline_icon_comment" />
+
+    <TextView
+        android:id="@+id/blank"
+        style="@style/BlankLine"
+        android:layout_height="12dp"
+        android:layout_below="@+id/iv_comment"
+        android:layout_marginTop="8dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blank"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_comment"
+            style="@style/BlackText_14sp"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/comment_indicator_selector"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="12dp"
+            android:text="@string/comment"
+            android:textColor="@drawable/comment_text_selector" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/rb_tread"
+            style="@style/BlackText_14sp"
+            android:button="@null"
+            android:drawableBottom="@drawable/comment_indicator_selector"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:text="@string/tread"
+            android:textColor="@drawable/comment_text_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_praise"
+            style="@style/BlackText_14sp"
+            android:button="@null"
+            android:drawableBottom="@drawable/comment_indicator_selector"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:text="@string/praise"
+            android:textColor="@drawable/comment_text_selector" />
+    </RadioGroup>
+
+    <TextView
+        style="@style/HorizontalLine"
+        android:layout_below="@+id/rg_indicator" />
+</RelativeLayout>

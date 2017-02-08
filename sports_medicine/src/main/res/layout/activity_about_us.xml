@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about_us"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.tianxiabuyi.sports_medicine.personal.AboutUsActivity">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:src="@mipmap/logo_txby" />
+
+    <TextView
+        style="@style/BlackText_16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="苏州天下布医信息科技有限公司" />
+
+    <TextView style="@style/HorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_weight="1"
+            android:text="@string/company_phone" />
+
+        <TextView
+            style="@style/Text_16sp"
+            android:text="0512-69356650" />
+    </LinearLayout>
+
+    <TextView style="@style/HorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_weight="1"
+            android:text="@string/company_email" />
+
+        <TextView
+            style="@style/Text_16sp"
+            android:text="admin@eeesys.com" />
+    </LinearLayout>
+
+    <TextView style="@style/HorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_weight="1"
+            android:text="@string/company_postcode" />
+
+        <TextView
+            style="@style/Text_16sp"
+            android:text="215000" />
+    </LinearLayout>
+
+    <TextView style="@style/HorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            style="@style/BlackText_16sp"
+            android:layout_weight="1"
+            android:text="@string/company_address" />
+
+        <TextView
+            style="@style/Text_16sp"
+            android:text="苏州市高新区竹园路209号" />
+    </LinearLayout>
+
+    <TextView style="@style/HorizontalLine" />
+
+    <TextView
+        style="@style/Text_14sp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:layout_marginBottom="32dp"
+        android:text="苏州天下布医信息科技有限公司 版权所有"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content" />
+</LinearLayout>
